@@ -10372,6 +10372,10 @@
     - name: Commands
       uid: sp-Resource_Manager
       displayName: Resource Manager
+    - name: data-boundary
+      uid: az_data-boundary
+      displayName: az data-boundary
+      items: []
     - name: deployment
       items:
       - name: Commands
@@ -11424,9 +11428,14 @@
         displayName: az signalr key
         items: []
       - name: network-rule
-        uid: az_signalr_network-rule
-        displayName: az signalr network-rule
-        items: []
+        items:
+        - name: Commands
+          uid: az_signalr_network-rule
+          displayName: az signalr network-rule
+        - name: ip-rule
+          uid: az_signalr_network-rule_ip-rule
+          displayName: az signalr network-rule ip-rule
+          items: []
       - name: replica
         uid: az_signalr_replica
         displayName: az signalr replica

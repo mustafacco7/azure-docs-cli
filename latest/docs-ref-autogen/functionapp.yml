@@ -71,6 +71,7 @@ directCommands:
                           [--vnet]
                           [--workload-profile-name]
                           [--workspace]
+                          [--zone-redundant {false, true}]
   examples:
   - summary: |-
       Create a basic function app.
@@ -275,6 +276,12 @@ directCommands:
   - name: --workspace
     summary: |-
       Name of an existing log analytics workspace to be used for the application insights component.
+  - name: --zone-redundant
+    defaultValue: "False"
+    parameterValueGroup: "false, true"
+    summary: |-
+      Enable zone redundancy for high availability. Applies to Flex Consumption SKU only.
+    isPreview: true
 - uid: az_functionapp_create(appservice-kube)
   name: az functionapp create
   extensionSuffix: appservice-kube
@@ -565,7 +572,14 @@ directCommands:
   status: GA
   sourceType: Core
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-  syntax: az functionapp list-flexconsumption-locations
+  syntax: az functionapp list-flexconsumption-locations [--zone-redundant {false, true}]
+  optionalParameters:
+  - name: --zone-redundant
+    defaultValue: "False"
+    parameterValueGroup: "false, true"
+    summary: |-
+      Filter the list to return only locations which support zone redundancy.
+    isPreview: true
 - uid: az_functionapp_list-flexconsumption-runtimes
   name: az functionapp list-flexconsumption-runtimes
   summary: |-

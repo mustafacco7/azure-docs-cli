@@ -439,6 +439,7 @@ commands:
 - az_csvmware
 - az_custom-providers
 - az_customlocation
+- az_data-boundary
 - az_databox
 - az_databoxedge
 - az_databricks

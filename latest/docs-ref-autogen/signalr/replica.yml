@@ -109,6 +109,39 @@ directCommands:
     name: --signalr-name
     summary: |-
       Name of the SignalR.
+- uid: az_signalr_replica_restart
+  name: az signalr replica restart
+  summary: |-
+    Restart a replica of SignalR Service.
+  status: GA
+  sourceType: Core
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
+  syntax: >-
+    az signalr replica restart [--ids]
+                               [--replica-name]
+                               [--resource-group]
+                               [--signalr-name]
+                               [--subscription]
+  examples:
+  - summary: |-
+      Restart a replica
+    syntax: az signalr replica restart --replica-name MyReplica --signalr-name MySignalR -g MyResourceGroup
+  optionalParameters:
+  - name: --ids
+    summary: |-
+      One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+  - name: --replica-name
+    summary: |-
+      Name of the replica.
+  - name: --resource-group -g
+    summary: |-
+      Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --signalr-name
+    summary: |-
+      Name of the SignalR.
+  - name: --subscription
+    summary: |-
+      Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
 - uid: az_signalr_replica_show
   name: az signalr replica show
   summary: |-
@@ -142,11 +175,80 @@ directCommands:
   - name: --subscription
     summary: |-
       Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+- uid: az_signalr_replica_start
+  name: az signalr replica start
+  summary: |-
+    Start a replica of SignalR Service.
+  status: GA
+  sourceType: Core
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
+  syntax: >-
+    az signalr replica start [--ids]
+                             [--replica-name]
+                             [--resource-group]
+                             [--signalr-name]
+                             [--subscription]
+  examples:
+  - summary: |-
+      Start a replica
+    syntax: az signalr replica start --replica-name MyReplica --signalr-name MySignalR -g MyResourceGroup
+  optionalParameters:
+  - name: --ids
+    summary: |-
+      One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+  - name: --replica-name
+    summary: |-
+      Name of the replica.
+  - name: --resource-group -g
+    summary: |-
+      Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --signalr-name
+    summary: |-
+      Name of the SignalR.
+  - name: --subscription
+    summary: |-
+      Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+- uid: az_signalr_replica_stop
+  name: az signalr replica stop
+  summary: |-
+    Stop a replica of SignalR Service.
+  status: GA
+  sourceType: Core
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
+  syntax: >-
+    az signalr replica stop [--ids]
+                            [--replica-name]
+                            [--resource-group]
+                            [--signalr-name]
+                            [--subscription]
+  examples:
+  - summary: |-
+      Stop a replica
+    syntax: az signalr replica stop --replica-name MyReplica --signalr-name MySignalR -g MyResourceGroup
+  optionalParameters:
+  - name: --ids
+    summary: |-
+      One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+  - name: --replica-name
+    summary: |-
+      Name of the replica.
+  - name: --resource-group -g
+    summary: |-
+      Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --signalr-name
+    summary: |-
+      Name of the SignalR.
+  - name: --subscription
+    summary: |-
+      Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
 commands:
 - az_signalr_replica_create
 - az_signalr_replica_delete
 - az_signalr_replica_list
+- az_signalr_replica_restart
 - az_signalr_replica_show
+- az_signalr_replica_start
+- az_signalr_replica_stop
 globalParameters:
 - name: --debug
   summary: |-
@@ -172,5 +274,5 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
+  ms.date: 10/14/2024
   description: Manage replica settings.
